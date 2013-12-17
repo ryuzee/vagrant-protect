@@ -11,7 +11,7 @@ module VagrantProtect
 
     def call(env)
       if env[:machine].config.protect.enabled 
-        env[:ui].info "Only executed shutdown because destroy command is disabled"
+        env[:ui].info "You can not shutdown the instance because destroy command is disabled in the configuration"
         return
       end
       @app.call(env)
